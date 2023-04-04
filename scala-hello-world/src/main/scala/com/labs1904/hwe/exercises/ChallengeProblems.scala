@@ -7,6 +7,9 @@ object ChallengeProblems {
     Params - String
     Returns - String
   */
+  def sameString(input: String) = {
+     input
+  }
 
 
   /*
@@ -14,6 +17,9 @@ object ChallengeProblems {
   Params - None
   Returns - String
    */
+  def helloWorld() = {
+     "Hello World!"
+  }
 
   /*
   3. Write a function that takes in a list and returns the total size of the list
@@ -21,6 +27,9 @@ object ChallengeProblems {
   Params - List[Int]
   Returns - Int
    */
+  def listSize(input: List[Int]) = {
+    input.size
+  }
 
   /*
   4. Write a function that takes in an int and adds an int that you create within the function and returns the addition of the two together
@@ -28,6 +37,10 @@ object ChallengeProblems {
   Params - Int
   Returns - Int
    */
+  def sumInts(input: Int) = {
+    val x = 25;
+    x + input
+  }
 
 
   /*
@@ -36,24 +49,37 @@ object ChallengeProblems {
    Params - List[String]
    Returns - List[String]
 */
+  def upper(input: List[String]) = {
+    input.map(s => s.toUpperCase())
+  }
 
   /*
   6. Write a function that returns a new list, where only elements of the list passed in that are 0 or positive numbers are kept.
   Params - List[Int]
   Returns - List[Int]
    */
+  def filterNegatives(input: List[Int]) = {
+    input.filter(n => n >= 0)
+  }
 
   /*
   7. Returns a new list, where only the elements passed in containing "car" are kept to the new list.
   Params - List[String]
   Returns - List[String]
  */
+  def containsCar(input: List[String]) = {
+    input.filter(s => s.contains("car"))
+  }
 
   /*
     8. Returns the sum of all numbers passed in.
     Params - List[Int]
     Returns - Int
    */
+  def sumList(input: List[Int]) = {
+    input.foldLeft(0)((sum, n) => n + sum)
+  }
+
 
   /*
   9. Write a function that takes in an integer with a cats age, and return the human age equivalent.
@@ -61,6 +87,9 @@ object ChallengeProblems {
     Params - Int
     Returns - Int
    */
+  def catsAge(input: Int) = {
+    input * 4
+  }
 
   /*
   10. Same question as #9, but this time you are given a Option[Int]
@@ -70,17 +99,26 @@ object ChallengeProblems {
     -Params - Option[Int]
     -Returns - Option[Int]
  */
+  def catsAgeOption(input: Option[Int]) = {
+    input.map(age => age * 4)
+  }
 
   /*
   11. Write a function that takes in a list of ints, and return the minimum of the ints provided
   Params - List
   Returns - Int
    */
+  def minimum(input: List[Int]) = {
+    input.sorted.head
+  }
 
   /*
   12. Same as question 11, but this time you are given a list of Option[Ints], returns the minimum of the Ints provided.
   If no ints are provided, return None.
  */
+  def minimumOption(input: List[Option[Int]]): Option[Int] = {
+    input.sorted.find(i => i.isDefined).flatten
+  }
 
 
 
